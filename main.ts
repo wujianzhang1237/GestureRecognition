@@ -7,7 +7,7 @@ load dependency
 
 //% color="#006400" weight=20 icon="\uf130"
 namespace GestureRecognition {
-    let initRegisterArray[][2] = [   
+    let initRegisterArray = [   
         [0xEF,0x00],
         [0x32,0x29],
         [0x33,0x01],
