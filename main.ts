@@ -7,7 +7,7 @@ load dependency
 
 //% color="#006400" weight=20 icon="\uf130"
 namespace GestureRecognition {
-    let initRegisterArray:number[][2] = [   
+    let initRegisterArray[][2] = [   
         [0xEF,0x00],
         [0x32,0x29],
         [0x33,0x01],
@@ -261,13 +261,13 @@ namespace GestureRecognition {
 
 
 
-    function GestureSelectBank(bank:bank_e):void{
+    function GestureSelectBank(bank:number):void{
         switch(bank)
         {
-            case BANK0:
+            case 0:
                 GestureWriteReg(PAJ7620_REGITER_BANK_SEL,PAJ7620_BANK0);
                 break;
-            case BANK1:
+            case 1:
                 GestureWriteReg(PAJ7620_REGITER_BANK_SEL,PAJ7620_BANK1);
                 break;               
             default:
@@ -279,8 +279,8 @@ namespace GestureRecognition {
 
     export function GestureInit(): number {
         basic.pause(100);//等待芯片稳定
-        GestureSelectBank(BANK0);
-        GestureSelectBank(BANK0);
+        GestureSelectBank(0);
+        GestureSelectBank(0);
         if((GestureReadReg(0) != 0x20)||(GestureReadReg(1)!=0x76))
         {
             return 0xff;
@@ -291,7 +291,7 @@ namespace GestureRecognition {
 
         }
 
-        GestureSelectBank(BANK0);
+        GestureSelectBank(0);
         return 0;
     }
 
