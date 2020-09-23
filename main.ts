@@ -5,7 +5,7 @@ load dependency
 "Asr": "file:../pxt-GestureRecognition"
 */
 
-//% color="#3CB371" weight=20 icon="\ue05d"
+//% color="#3CB371" weight=20 icon="\uf259"
 namespace GestureRecognition{
     
     let Init_Register_Array = [   
@@ -136,10 +136,17 @@ namespace GestureRecognition{
     const PAJ7620_BANK0 = 0
     const PAJ7620_BANK1 = 1
 
-    enum bank_e {
-        BANK0 = 0, 
-        BANK1 = 1
-    }
+    const GES_RIGHT_FLAG = 1
+    const GES_LEFT_FLAG = 2   
+    const GES_UP_FLAG = 4
+    const GES_DOWN_FLAG = 8 
+    const GES_FORWARD_FLAG = 16
+    const GES_BACKWARD_FLAG = 32   
+    const GES_CLOCKWISE_FLAG = 64
+    const GES_COUNT_CLOCKWISE_FLAG = 128 
+    const GES_WAVE_FLAG = 0
+
+    const GES_ENTRY_TIME = 800
 
 
     function GestureWriteReg(addr:number,cmd:number){
@@ -215,11 +222,19 @@ namespace GestureRecognition{
     //% blockId="GetGesture" block="GetGesture"
     export function GetGesture(): number {
         
-        return GestureReadReg(0x43);
+        return  GestureReadReg(0x43);
+
     }
 
-    
+    //% blockId="GetGesture2" block="GetGesture2"
+    export function GetGesture2(): number {
+        
+        return  GestureReadReg(0x44);
 
- 
- 
+    }
+
+
+
+
+    
 }
