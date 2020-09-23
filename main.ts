@@ -231,15 +231,10 @@ namespace GestureRecognition{
             case GES_LEFT_FLAG:
             case GES_UP_FLAG:
             case GES_DOWN_FLAG: 
-                 basic.pause(GES_ENTRY_TIME);
-                 date = GestureReadReg(0x43);
-                 break;
-
             case GES_FORWARD_FLAG:
             case GES_BACKWARD_FLAG:
             case GES_CLOCKWISE_FLAG:
             case GES_COUNT_CLOCKWISE_FLAG: 
- 
                 break;
 
             default:
