@@ -1,7 +1,7 @@
 {
-    "name": "GR",
+    "name": "GestureRecognition",
     "version": "1.0.1",
-    "description": "Extension for YahBoom GR V1.0.1",
+    "description": "Extension for YahBoom GestureRecognition V1.0.1",
     "license": "MIT",
     "dependencies": {
         "core": "*"

@@ -5,8 +5,8 @@ load dependency
 "Asr": "file:../pxt-GestureRecognition"
 */
 
-//% color="#006400" weight=20 icon="\uf130"
-namespace GR{
+//% color="#3CB371" weight=20 icon="\ue05d"
+namespace GestureRecognition{
     
     let Init_Register_Array = [   
         [0xEF,0x00],
@@ -217,6 +217,8 @@ namespace GR{
         
         return GestureReadReg(0x43);
     }
+
+    
 
  
  
