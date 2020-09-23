@@ -11,8 +11,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh-cn/GestureRecognitionr-strings.json",
-        "_locales/zh-tw/GestureRecognitionr-strings.json"
+        "_locales/zh-cn/GestureRecognition-strings.json",
+        "_locales/zh-tw/GestureRecognition-strings.json"
     ],
     "testFiles": [
         "test.ts"
