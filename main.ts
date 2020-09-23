@@ -293,6 +293,7 @@ namespace GestureRecognition {
 
         GestureSelectBank(0);
         return 0;
+        
     }
 
     export function GetGesture(): number {
