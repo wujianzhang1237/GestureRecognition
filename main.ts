@@ -279,12 +279,14 @@ namespace GR{
 
     //% blockId="GestureInit" block="GestureInit"
     export function GestureInit(): number {
-        basic.pause(100);//等待芯片稳定
+        basic.pause(800);//等待芯片稳定
         GestureSelectBank(0);
         GestureSelectBank(0);
         if((GestureReadReg(0) != 0x20)||(GestureReadReg(1)!=0x76))
         {
+            serial.writeString("error");
             return 0xff;
+            
         }
         for(let i = 0;i < initRegisterArray.length;i++)
         {
