@@ -281,13 +281,13 @@ namespace GestureRecognition {
         basic.pause(100);//等待芯片稳定
         GestureSelectBank(BANK0);
         GestureSelectBank(BANK0);
-        if(GestureReadReg(0) != 0x20)||(GestureReadReg(1)!=0x76)
+        if((GestureReadReg(0) != 0x20)||(GestureReadReg(1)!=0x76))
         {
             return 0xff;
         }
         for(let i = 0;i < initRegisterArray.length;i++)
         {
-            GestureWriteReg(initRegisterArray[i][0],(initRegisterArray[i][1);
+            GestureWriteReg(initRegisterArray[i][0],initRegisterArray[i][1]);
 
         }
 
