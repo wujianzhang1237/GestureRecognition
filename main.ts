@@ -7,7 +7,7 @@ load dependency
 
 //% color="#006400" weight=20 icon="\uf130"
 namespace GestureRecognition {
-    let initRegisterArray = [   
+    let initRegisterArray= [   
         [0xEF,0x00],
         [0x32,0x29],
         [0x33,0x01],
@@ -226,7 +226,7 @@ namespace GestureRecognition {
         [0x77,0x01],
         [0x7C,0x84],
         [0x7D,0x03],
-        [0x7E,0x01],]
+        [0x7E,0x01]]
 
     const PAJ7620_ID = 0x73                   //手势识别模块地址
     const PAJ7620_REGITER_BANK_SEL = 0xEF     //寄存器库选择
