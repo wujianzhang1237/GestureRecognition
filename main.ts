@@ -284,7 +284,6 @@ namespace GR{
         GestureSelectBank(0);
         if((GestureReadReg(0) != 0x20)||(GestureReadReg(1)!=0x76))
         {
-            serial.writeString("error");
             return 0xff;
             
         }
