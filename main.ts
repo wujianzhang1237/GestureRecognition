@@ -6,7 +6,7 @@ load dependency
 */
 
 //% color="#006400" weight=20 icon="\uf130"
-namespace GestureRecognition {
+namespace GR{
     let initRegisterArray= [   
         [0xEF,0x00],
         [0x32,0x29],

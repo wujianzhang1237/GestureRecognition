@@ -1,6 +1,6 @@
-# Speech
+# GR
 
-Extension for Yahboom Speech V1.0
+Extension for Yahboom GR V1.0
 
 ## License
 
