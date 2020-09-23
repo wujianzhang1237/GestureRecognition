@@ -144,7 +144,7 @@ namespace GestureRecognition{
     const GES_BACKWARD_FLAG = 32   
     const GES_CLOCKWISE_FLAG = 64
     const GES_COUNT_CLOCKWISE_FLAG = 128 
-    const GES_WAVE_FLAG = 0
+    const GES_WAVE_FLAG = 1
 
     const GES_ENTRY_TIME = 800
 
@@ -219,17 +219,37 @@ namespace GestureRecognition{
         return 0;
         
     }
+
     //% blockId="GetGesture" block="GetGesture"
     export function GetGesture(): number {
         
-        return  GestureReadReg(0x43);
+        let date = GestureReadReg(0x43);
 
-    }
+        switch(date)
+        {
+            case GES_RIGHT_FLAG:
+            case GES_LEFT_FLAG:
+            case GES_UP_FLAG:
+            case GES_DOWN_FLAG: 
+                 basic.pause(GES_ENTRY_TIME);
+                 date = GestureReadReg(0x43);
+                 return date;
+                 break;
 
-    //% blockId="GetGesture2" block="GetGesture2"
-    export function GetGesture2(): number {
-        
-        return  GestureReadReg(0x44);
+            case GES_FORWARD_FLAG:
+            case GES_BACKWARD_FLAG:
+            case GES_CLOCKWISE_FLAG:
+            case GES_COUNT_CLOCKWISE_FLAG: 
+                return date;
+                break;
+
+            default:
+                date = GestureReadReg(0x44);
+                if(date == GES_WAVE_FLAG)
+                return 11;
+                break;
+
+        }
 
     }
 
