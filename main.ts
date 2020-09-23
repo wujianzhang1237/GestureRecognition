@@ -233,24 +233,26 @@ namespace GestureRecognition{
             case GES_DOWN_FLAG: 
                  basic.pause(GES_ENTRY_TIME);
                  date = GestureReadReg(0x43);
-                 return date;
                  break;
 
             case GES_FORWARD_FLAG:
             case GES_BACKWARD_FLAG:
             case GES_CLOCKWISE_FLAG:
             case GES_COUNT_CLOCKWISE_FLAG: 
-                return date;
+ 
                 break;
 
             default:
                 date = GestureReadReg(0x44);
                 if(date == GES_WAVE_FLAG)
-                return 11;
+                {
+                    return 11;
+                }
                 break;
 
         }
 
+        return date;
     }
 
 
