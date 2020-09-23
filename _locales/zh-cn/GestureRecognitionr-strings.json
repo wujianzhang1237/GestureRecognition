@@ -1,0 +1,16 @@
+{
+  "GestureRecognition.GestureInit|block": "初始化手势识别(成功:0 失败:255)",
+  "GestureRecognition.GetGesture|block": "获取手势识别结果值",
+  "GestureRecognition.CheckGesture|block": "判断手势为(是:0 否:255) %state",
+  
+  "GestureRecognition.Gesture_state.right|block": "从左往右",
+  "GestureRecognition.Gesture_state.left|block": "从右往左",
+  "GestureRecognition.Gesture_state.up|block": "从下往上",
+  "GestureRecognition.Gesture_state.down|block": "从上往下",
+  "GestureRecognition.Gesture_state.wave|block": "挥手",
+  "GestureRecognition.Gesture_state.forward|block": "从后往前",
+  "GestureRecognition.Gesture_state.backward|block": "从前往后",
+  "GestureRecognition.Gesture_state.clockwise|block": "顺时针",
+  "GestureRecognition.Gesture_state.count_clockwise|block": "逆时针"
+
+}

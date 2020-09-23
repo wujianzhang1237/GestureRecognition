@@ -146,7 +146,28 @@ namespace GestureRecognition{
     const GES_COUNT_CLOCKWISE_FLAG = 128 
     const GES_WAVE_FLAG = 1
 
-    const GES_ENTRY_TIME = 800
+    
+
+    export enum Gesture_state{
+        //% blockId="right" block="right"
+        right = 1,
+        //% blockId="left" block="left"  
+        left = 2,
+        //% blockId="up" block="up"        
+        up = 4,
+        //% blockId="down" block="down"        
+        down = 8,
+        //% blockId="wave" block="wave"        
+        wave = 11,
+        //% blockId="forward" block="forward"        
+        forward = 16,
+        //% blockId="backward" block="backward"        
+        backward = 32,
+        //% blockId="clockwise" block="clockwise"        
+        clockwise = 64,
+        //% blockId="count_clockwise" block="count_clockwise"        
+        count_clockwise = 128
+    }
 
 
     function GestureWriteReg(addr:number,cmd:number){
@@ -250,8 +271,18 @@ namespace GestureRecognition{
         return date;
     }
 
+    //% blockId="CheckGesture" block="CheckGesture is %state"
+    export function CheckGesture(state:Gesture_state): number {
+        
+        if(GetGesture() == state)
+        {
+            return 0;
+        }
+        else
+        {
+            return 0xff;
+        }
 
+    }
 
-
-    
 }
