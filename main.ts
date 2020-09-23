@@ -5,6 +5,7 @@ load dependency
 "Asr": "file:../pxt-GestureRecognition"
 */
 
+
 //% color="#3CB371" weight=20 icon="\uf259"
 namespace GestureRecognition{
     
@@ -206,7 +207,7 @@ namespace GestureRecognition{
 
     }
 
-    //% blockId="GestureInit" block="GestureInit"
+    //% blockId="GestureInit" block="Gesture Init(success：0 failure：255)"
     export function GestureInit(): number {
         basic.pause(800);//等待芯片稳定
 
@@ -241,7 +242,7 @@ namespace GestureRecognition{
         
     }
 
-    //% blockId="GetGesture" block="GetGesture"
+    //% blockId="GetGesture" block="Get Gesture"
     export function GetGesture(): number {
         
         let date = GestureReadReg(0x43);
@@ -271,7 +272,7 @@ namespace GestureRecognition{
         return date;
     }
 
-    //% blockId="CheckGesture" block="CheckGesture is %state"
+    //% blockId="CheckGesture" block="Check Gesture is %state (yes：0 no：255)"
     export function CheckGesture(state:Gesture_state): number {
         
         if(GetGesture() == state)
