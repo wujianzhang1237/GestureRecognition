@@ -229,7 +229,7 @@ namespace GR{
         [0x7D,0x03],
         [0x7E,0x01]]
 
-    const PAJ7620_ID = 0x73                   //手势识别模块地址
+    const PAJ7620_ID = 0x50                   //手势识别模块地址
     const PAJ7620_REGITER_BANK_SEL = 0xEF     //寄存器库选择
 
     const PAJ7620_BANK0 = 0
