@@ -7,6 +7,7 @@ load dependency
 
 //% color="#006400" weight=20 icon="\uf130"
 namespace GR{
+    
     let initRegisterArray= [   
         [0xEF,0x00],
         [0x32,0x29],
@@ -276,7 +277,7 @@ namespace GR{
 
     }
 
-
+    //% blockId="GestureInit" block="GestureInit"
     export function GestureInit(): number {
         basic.pause(100);//等待芯片稳定
         GestureSelectBank(0);
@@ -295,7 +296,7 @@ namespace GR{
         return 0;
         
     }
-
+    //% blockId="GetGesture" block="GetGesture"
     export function GetGesture(): number {
         
         return GestureReadReg(0x43);
