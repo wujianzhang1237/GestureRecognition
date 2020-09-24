@@ -1,7 +1,7 @@
 {
   "GestureRecognition.GestureInit|block": "初始化手勢識別(成功:0 失敗:255)",
   "GestureRecognition.GetGesture|block": "獲取手勢識別結果值",
-  "GestureRecognition.CheckGesture|block": "判斷手勢為(是:0 否:255) %state",
+  "GestureRecognition.SelectGesture|block": "選擇手勢為 %state",
   
   "GestureRecognition.Gesture_state.right|block": "從左往右",
   "GestureRecognition.Gesture_state.left|block": "從右往左",

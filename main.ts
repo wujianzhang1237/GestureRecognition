@@ -158,8 +158,6 @@ namespace GestureRecognition{
         up = 4,
         //% blockId="down" block="down"        
         down = 8,
-        //% blockId="wave" block="wave"        
-        wave = 11,
         //% blockId="forward" block="forward"        
         forward = 16,
         //% blockId="backward" block="backward"        
@@ -167,7 +165,9 @@ namespace GestureRecognition{
         //% blockId="clockwise" block="clockwise"        
         clockwise = 64,
         //% blockId="count_clockwise" block="count_clockwise"        
-        count_clockwise = 128
+        count_clockwise = 128,
+        //% blockId="wave" block="wave"        
+        wave = 256
     }
 
 
@@ -207,7 +207,7 @@ namespace GestureRecognition{
 
     }
 
-    //% blockId="GestureInit" block="Gesture Init(success：0 failure：255)"
+    //% blockId="GestureInit" block="gesture init(success：0 failure：255)"
     export function GestureInit(): number {
         basic.pause(800);//等待芯片稳定
 
@@ -242,7 +242,7 @@ namespace GestureRecognition{
         
     }
 
-    //% blockId="GetGesture" block="Get Gesture"
+    //% blockId="GetGesture" block="get gesture"
     export function GetGesture(): number {
         
         let date = GestureReadReg(0x43);
@@ -263,7 +263,7 @@ namespace GestureRecognition{
                 date = GestureReadReg(0x44);
                 if(date == GES_WAVE_FLAG)
                 {
-                    return 11;
+                    return 256;
                 }
                 break;
 
@@ -272,18 +272,13 @@ namespace GestureRecognition{
         return date;
     }
 
-    //% blockId="CheckGesture" block="Check Gesture is %state (yes：0 no：255)"
+    //% blockId="SelectGesture" block="select gesture is %state "
     export function CheckGesture(state:Gesture_state): number {
         
-        if(GetGesture() == state)
-        {
-            return 0;
-        }
-        else
-        {
-            return 0xff;
-        }
-
+            return state;
     }
+
+    
+
 
 }
