@@ -272,8 +272,8 @@ namespace GestureRecognition{
         return date;
     }
 
-    //% blockId="SelectGesture" block="select gesture is %state "
-    export function CheckGesture(state:Gesture_state): number {
+    //% blockId="SelectGesture" block="select gesture is %state"
+    export function SelectGesture(state:Gesture_state): number {
         
             return state;
     }
