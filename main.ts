@@ -2,7 +2,7 @@
 Copyright (C): 2010-2020, Shenzhen Yahboom Tech
 modified from wujianzhang
 load dependency
-"Asr": "file:../pxt-GestureRecognition"
+"GestureRecognition": "file:../pxt-GestureRecognition"
 */
 
 
